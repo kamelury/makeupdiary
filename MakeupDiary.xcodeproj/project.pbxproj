@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2460CD64182081160025441A /* MDCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2460CD63182081160025441A /* MDCameraViewController.m */; };
 		24A0B2261820758100A07362 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0B2251820758100A07362 /* Foundation.framework */; };
 		24A0B2281820758100A07362 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0B2271820758100A07362 /* CoreGraphics.framework */; };
 		24A0B22A1820758100A07362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0B2291820758100A07362 /* UIKit.framework */; };
@@ -22,6 +23,8 @@
 		24A0B24A1820758100A07362 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0B2291820758100A07362 /* UIKit.framework */; };
 		24A0B2521820758100A07362 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 24A0B2501820758100A07362 /* InfoPlist.strings */; };
 		24A0B2541820758100A07362 /* MakeupDiaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A0B2531820758100A07362 /* MakeupDiaryTests.m */; };
+		24A0B25F1820759200A07362 /* MDEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A0B25E1820759200A07362 /* MDEntry.m */; };
+		24A0B2631820787200A07362 /* MDProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 24A0B2621820787200A07362 /* MDProduct.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2460CD62182081160025441A /* MDCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDCameraViewController.h; sourceTree = "<group>"; };
+		2460CD63182081160025441A /* MDCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDCameraViewController.m; sourceTree = "<group>"; };
 		24A0B2221820758100A07362 /* MakeupDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeupDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24A0B2251820758100A07362 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		24A0B2271820758100A07362 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +60,10 @@
 		24A0B24F1820758100A07362 /* MakeupDiaryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MakeupDiaryTests-Info.plist"; sourceTree = "<group>"; };
 		24A0B2511820758100A07362 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		24A0B2531820758100A07362 /* MakeupDiaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MakeupDiaryTests.m; sourceTree = "<group>"; };
+		24A0B25D1820759200A07362 /* MDEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDEntry.h; path = ../MDEntry.h; sourceTree = "<group>"; };
+		24A0B25E1820759200A07362 /* MDEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDEntry.m; path = ../MDEntry.m; sourceTree = "<group>"; };
+		24A0B2611820787200A07362 /* MDProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDProduct.h; sourceTree = "<group>"; };
+		24A0B2621820787200A07362 /* MDProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDProduct.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +123,15 @@
 		24A0B22B1820758100A07362 /* MakeupDiary */ = {
 			isa = PBXGroup;
 			children = (
+				24A0B2601820785100A07362 /* DataModels */,
 				24A0B2341820758100A07362 /* MDAppDelegate.h */,
 				24A0B2351820758100A07362 /* MDAppDelegate.m */,
 				24A0B2371820758100A07362 /* Main_iPhone.storyboard */,
 				24A0B23A1820758100A07362 /* Main_iPad.storyboard */,
 				24A0B23D1820758100A07362 /* MDViewController.h */,
 				24A0B23E1820758100A07362 /* MDViewController.m */,
+				2460CD62182081160025441A /* MDCameraViewController.h */,
+				2460CD63182081160025441A /* MDCameraViewController.m */,
 				24A0B2401820758100A07362 /* Images.xcassets */,
 				24A0B22C1820758100A07362 /* Supporting Files */,
 			);
@@ -153,6 +165,17 @@
 				24A0B2501820758100A07362 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24A0B2601820785100A07362 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				24A0B2611820787200A07362 /* MDProduct.h */,
+				24A0B2621820787200A07362 /* MDProduct.m */,
+				24A0B25D1820759200A07362 /* MDEntry.h */,
+				24A0B25E1820759200A07362 /* MDEntry.m */,
+			);
+			name = DataModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +279,10 @@
 			files = (
 				24A0B2321820758100A07362 /* main.m in Sources */,
 				24A0B23F1820758100A07362 /* MDViewController.m in Sources */,
+				24A0B2631820787200A07362 /* MDProduct.m in Sources */,
 				24A0B2361820758100A07362 /* MDAppDelegate.m in Sources */,
+				2460CD64182081160025441A /* MDCameraViewController.m in Sources */,
+				24A0B25F1820759200A07362 /* MDEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,6 +501,7 @@
 				24A0B2591820758100A07362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		24A0B25A1820758100A07362 /* Build configuration list for PBXNativeTarget "MakeupDiaryTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +510,7 @@
 				24A0B25C1820758100A07362 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
